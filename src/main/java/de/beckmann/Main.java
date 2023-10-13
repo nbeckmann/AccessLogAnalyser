@@ -28,8 +28,8 @@ public class Main {
 
     public static void main(final String[] args) {
         try {
-            final String inputFilePath = "D:\\Development\\tmp\\test_access.log";
-            final String outputFilePath = "D:\\Development\\tmp\\request_per_second.csv";
+            final String inputFilePath = args[0];
+            final String outputFilePath = args[1];
             final List<LocalDateTime> timestamps = readTimestamps(inputFilePath);
 
             final Map<LocalDateTime, Long> counts = countEntriesPerSecond(timestamps);
